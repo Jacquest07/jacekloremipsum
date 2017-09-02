@@ -28,6 +28,7 @@ public class Generator implements LoremIpsum
     @Override
     public String generateWords(int number)
     {
-        return null;
+        WordsHelper wordsHelper = new WordsHelper(lorem);
+        return wordsHelper.stringOfWords(number);
     }
 }
