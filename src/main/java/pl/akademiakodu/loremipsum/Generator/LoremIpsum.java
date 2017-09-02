@@ -1,4 +1,4 @@
-package pl.akademiakodu.loremipsum;
+package pl.akademiakodu.loremipsum.Generator;
 
 /**
  * Created by Eriot on 2017-09-01.

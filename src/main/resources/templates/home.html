@@ -6,11 +6,11 @@
 </head>
 <body>
 
-<form action="/generate" th:method="post">
-    <textarea rows="10" cols="50">
-        Lorem Lorem Lorem
+<form action="/" th:method="post">
+    <textarea disabled th:text=${lorem} rows="10" cols="50">
+
     </textarea><br>
-    <input type="number" value="5" step="1"><br>
+    <input name="number" type="number" value="5" step="1"><br>
     <input type="submit" value="GENERATE!"><br>
     <select name="option">
         <option value="1">PARAGRAPHS</option>
