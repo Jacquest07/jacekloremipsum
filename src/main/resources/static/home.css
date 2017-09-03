@@ -36,7 +36,7 @@ input[name="submit2"]:hover{
     background-color: #000;
     color: red;
 }
-input[name="textGoogle"]{
+input[name="q"]{
     width: 150px;
     height: 30px;
     text-align: center;
