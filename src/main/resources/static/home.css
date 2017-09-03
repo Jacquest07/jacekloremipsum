@@ -1,0 +1,49 @@
+article{
+    text-align: center;
+    border:double 5px red;
+    border-radius:10px;
+    font-family: 'Sedgwick Ave Display', cursive;
+    background-image: url("http://freewallpap.files.wordpress.com/2012/01/the-best-top-desktop-space-wallpapers-0e-hd-space-wallpaper-space-station.png");
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+}
+
+h1{
+    color: red;
+    padding: 10px;
+    font-size: 50px;
+}
+
+h2{
+    color: chocolate;
+}
+
+input[type="number"]{
+    width: 40px;
+}
+input[name="submit1"]:hover{
+    background-color: #000;
+    color: red;
+}
+input[name="submit2"]{
+    background-color: grey;
+    color: red;
+    font-size: 20px;
+}
+input[name="submit2"]:hover{
+    background-color: #000;
+    color: red;
+}
+input[name="textGoogle"]{
+    width: 150px;
+    height: 30px;
+    text-align: center;
+}
+.rocket{
+    background-color: red;
+    border:solid 5px;
+    border-color: black;
+
+}

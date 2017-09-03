@@ -20,7 +20,7 @@ public class LoremIpsumController
         return "home";
     }
 
-    @PostMapping("/")
+    @PostMapping("/generate")
     public String home(@ModelAttribute Form form, ModelMap modelMap)
     {
         Generator generator = new Generator();
