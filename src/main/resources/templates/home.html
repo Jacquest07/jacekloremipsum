@@ -8,22 +8,38 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link href="https://fonts.googleapis.com/css?family=Sedgwick+Ave+Display&amp;subset=latin-ext" rel="stylesheet">
     <link rel="stylesheet" href="home.css"/>
-
     <title>Title</title>
+
+    <script type='text/javascript'src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js">
+    </script>    <script type='text/javascript'>
+    $( document ).ready(function() {
+        $("#button").click(function() {
+            $.ajax({
+                url: "/api/home",
+                data: { number: $("#number").val(),option: $("#option1").val() }
+            }).then(function(data) {
+                $('#area').text(data);
+
+            });
+        });
+    });
+</script>
 </head>
 <body>
     <article>
+        <h1 id="8">Generator Lorem Ipsum</h1>
+        <textarea disabled th:text=${lorem} rows="20" cols="80" id="area"/><br>
         <form action="/generate" th:method="post">
-            <h1>Generator Lorem Ipsum</h1>
-            <textarea disabled th:text=${lorem} rows="20" cols="80"/><br>
-            <input name="number" type="number" value="2" step="1">
-            <select name="option">
-                <option value="1">PARAGRAPHS</option>
-                <option value="2">SENTENCES</option>
-                <option value="3">WORD</option>
+            <input name="number" type="number" value="2" step="1" id="number">
+            <select name="option" id="option1">
+                <option value="1" id="1">PARAGRAPHS</option>
+                <option value="2" id="2">SENTENCES</option>
+                <option value="3" id="3">WORD</option>
             </select>
-            <input name="submit1" type="submit" value="GENERATE!"><br>
+            <input name="submit1" type="submit" value="GENERATE!">
         </form>
+        <button id="button">GENERATE JavaScript</button>
+
         <h2>Darmowy lot na marsa poniżej po kliknieciu</h2>
         <a href="https://pl.wikipedia.org/wiki/Mars"><img class="rocket" width="100" height="100" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAB1klEQVRoge3ar4sUYRyA8U8wGEQMBsOFFQxGk+GCmCwGsZi3mDQYFE5ORPwHbCIYNolhQf8EDWaLXLGsskEU4Q5EDIYxnAvnMj/ed+e9d2bPeeCb3jc8D8wM77ssAwMDbSlq5gOe43JXcjHUhSzmK+7jeEeOQYSELOZJR45BxIQUuNeNZjOxId8w7kK0idiQAju42oVsHauEFHiLi/l1q1k1pMAUZ/Mrl9MmpMBTnMhuXULbkAKPckuXkSLkJ27lFl8mRUiBT7iRV/1fxphgJky4F0zsi48q1kd/13sfclBopjos1eNWNXO8wV2caRuyPLOMIQfnB26nDCki9h3GvMCloxBS4L3AM1wfQmADW/hdsv4F50NiUgS3DVnwoGLPHKfWKWSjZt/LoxIyXaeQrYo9c5xuI5grpPXL3oeQutnB9aaIvodMcSUkoklwt6OQX/bPXMdCI5YFd/Ead3AhIjjFtD40VokvGFmTY3wZY2t4sSoj1ePyWcdX3VQvbPSdIjV1j09oyOOMvpW0DXmGkxl9K2kT8grncsrWsWrIO2xmNW1glZCPuJZXs5nYkD3czOwYROyndrsbzWZiIiYdOQYREvAdDyX6QeCwqAtYqz8MDAz8z/wBXJdVd5Wa3OIAAAAASUVORK5CYII="></a>
         <form action="https://www.google.com/search" method="get">
